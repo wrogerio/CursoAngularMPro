@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-title>
+        <h1>Cadastro de Usuários</h1>
+    </mat-card-title>
+    <mat-card-content>
+
+        <mat-radio-group class="mb1" [(ngModel)]="tipo">
+            <mat-radio-button value="admin">Admin</mat-radio-button>
+            <mat-radio-button value="user">User</mat-radio-button>
+        </mat-radio-group>
+
+        <hr *ngIf="tipo != ''">
+
+        <mat-selection-list>
+            <ng-container *ngFor="let user of users">
+                <mat-list-option *ngIf="user.role == tipo">
+                    {{ user.login }} | {{ user.lastLogin | date }}
+                </mat-list-option>
+            </ng-container>
+        </mat-selection-list>
+    </mat-card-content>
+</mat-card>

@@ -22,6 +22,9 @@ import { NgForFormComponent } from './ng-for-form/ng-for-form.component';
 import { MatTableModule } from '@angular/material/table';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
+import { NgContainerComponent } from './ng-container/ng-container.component';
+import { NgContentComponent } from './ng-content/ng-content.component';
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     SubNgIfComponent,
     NgForComponent,
     NgForFormComponent,
-    NgSwitchComponent
+    NgSwitchComponent,
+    NgTemplateComponent,
+    NgContainerComponent,
+    NgContentComponent
   ],
   imports: [
     BrowserModule,
