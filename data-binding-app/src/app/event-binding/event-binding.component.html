@@ -1,0 +1,50 @@
+<div class="divSection">
+    <section>
+        <button mat-raised-button color="primary" (click)="save()">Save</button>
+        <button mat-raised-button color="warn" (click)="inc()"> {{ buttonName }}</button>
+    </section>
+
+    <section>
+        <button mat-raised-button color="primary" [disabled]="!btnEnable">My Button 1</button>
+        <button mat-raised-button color="warn" [disabled]="!btnEnable">My Button 2</button>
+        <button mat-raised-button color="accent" (click)="disable()">Disable</button>
+        <mat-progress-spinner color="primary" [mode]="spinnerMode" [value]="i">
+        </mat-progress-spinner>
+    </section>
+
+    <section>
+        <p>
+            <mat-checkbox color="warn" (change)="cbChange($event)">Desabilitar Controles</mat-checkbox>
+        </p>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Cars</mat-label>
+                <mat-select [disabled]="selectDisabled" (selectionChange)="selectedChange($event)">
+                    <mat-option value="1">Volvo</mat-option>
+                    <mat-option value="2">Saab</mat-option>
+                    <mat-option value="3">Mercedes</mat-option>
+                    <mat-option value="4">Audi</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <form class="example-form">
+                <mat-form-field appearance="fill">
+                    <mat-label>Valor Selecionado</mat-label>
+                    <input matInput [disabled]="selectDisabled" value="{{ selectedValue }}">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Texto Selecionado</mat-label>
+                    <input matInput [disabled]="selectDisabled" value="{{ selectedText }}">
+                </mat-form-field>
+            </form>
+        </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+        <mat-form-field >
+            <input matInput placeholder="first Name" (input)="inputEvent($event)" [value]="inputName">
+        </mat-form-field>
+        <br>
+        {{ inputName }}
+    </section>
+</div>

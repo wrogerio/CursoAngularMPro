@@ -1,0 +1,38 @@
+mat-radio-group{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+mat-radio-button{
+    padding: 5px 0;
+}
+
+.myClass1{
+    color: red;
+    font-size: 16px;
+    font-style: italic;
+    background-color: aqua;
+    padding: 5px;
+}
+
+.myClass2{
+    color: green;
+    font-size: 12px;
+    background-color: blanchedalmond;
+    padding: 9px;
+}
+
+.myClass3{
+    color: blue;
+    font-size: 22px;
+    background-color: cadetblue;
+    padding: 3px;
+}
+
+.myClass4{
+    color: orange;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: darkcyan;
+    padding: 14px;
+}
