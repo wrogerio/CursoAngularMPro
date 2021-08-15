@@ -1,0 +1,13 @@
+<h3>Relação de nomes</h3>
+<mat-divider></mat-divider>
+<p>{{ name }} {{lastName}}</p>
+<mat-divider></mat-divider>
+<p>{{ age }}</p>
+<mat-divider></mat-divider>
+
+<h1>Clients</h1>
+<div *ngFor="let item of clients">
+    <app-client [client]="item"></app-client>
+    <hr>
+</div>
+
